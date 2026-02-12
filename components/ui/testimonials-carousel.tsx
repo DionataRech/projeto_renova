@@ -59,7 +59,7 @@ export function TestimonialsCarousel({ images }: TestimonialsCarouselProps) {
               key={idx}
               className="flex-shrink-0 w-full sm:w-96 lg:w-[22rem] snap-center"
             >
-              <div className="rounded-2xl shadow-md bg-white p-3 h-80 sm:h-64 flex items-center justify-center transition-transform duration-300 transform will-change-transform hover:scale-[1.3] hover:z-20">
+              <div className="rounded-2xl shadow-md bg-white p-3 h-80 sm:h-64 flex items-center justify-center transition-transform duration-300 transform md:hover:scale-105 md:hover:z-20">
                 <div className="relative w-full h-full">
                   <Image
                     src={src}

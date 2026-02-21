@@ -64,7 +64,7 @@ export function BeforeAfterComparison({
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -91,7 +91,7 @@ export function BeforeAfterComparison({
           alt={beforeAlt}
           fill
           className="object-cover pointer-events-none"
-          priority
+          loading="lazy"
         />
         {showLabels && (
           <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm">
@@ -107,14 +107,14 @@ export function BeforeAfterComparison({
       >
         <div
           className="relative w-full h-full"
-          style={{ width: `${100 / (sliderPosition / 100)}%` }}
+          style={{ width: `${100 / (Math.max(sliderPosition, 1) / 100)}%` }}
         >
           <Image
             src={afterSrc}
             alt={afterAlt}
             fill
             className="object-cover pointer-events-none"
-            priority
+            loading="lazy"
           />
           {showLabels && (
             <div className="absolute top-4 right-4 bg-primary/90 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold backdrop-blur-sm">

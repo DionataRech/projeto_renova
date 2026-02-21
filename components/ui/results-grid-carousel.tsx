@@ -37,7 +37,7 @@ export function ResultsGridCarousel({ slides }: ResultsGridCarouselProps) {
     checkScroll();
     window.addEventListener("resize", checkScroll);
     return () => window.removeEventListener("resize", checkScroll);
-  }, []);
+  }, [mounted]);
 
   const scroll = (direction: "left" | "right") => {
     if (containerRef.current) {

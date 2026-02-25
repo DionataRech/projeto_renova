@@ -72,16 +72,13 @@ export default function RootLayout({
         />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    // Google Analytics
-    gtag('config', 'G-V16G1DTXP3');
-
-    // Google Ads
-    gtag('config', 'AW-17761658020');
-  `}
+  gtag('config', 'G-V16G1DTXP3');
+  gtag('config', 'AW-17761658020');
+`}
         </Script>
         {children}
       </body>

@@ -65,13 +65,23 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${inter.variable}`}>
       <body suppressHydrationWarning className="font-sans antialiased">
-        {/* Google Analytics */}
+        {/* Google Tag (GA4 + Google Ads) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-V16G1DTXP3"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-V16G1DTXP3');`}
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Google Analytics
+    gtag('config', 'G-V16G1DTXP3');
+
+    // Google Ads
+    gtag('config', 'AW-17761658020');
+  `}
         </Script>
         {children}
       </body>

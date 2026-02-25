@@ -20,14 +20,16 @@ export function CTASection() {
           </p>
 
           <a
-            href={whatsappLink}
+            href="https://api.whatsapp.com/..."
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() =>
-              (window as any).gtag?.("event", "whatsapp_click", {
-                method: "cta",
-              })
-            }
+            onClick={() => {
+              if (typeof window !== "undefined" && window.gtag) {
+                window.gtag("event", "conversion", {
+                  send_to: "AW-17761658020/XJNICI_8i_8bEKTJtZVC",
+                });
+              }
+            }}
           >
             <Button
               size="lg"

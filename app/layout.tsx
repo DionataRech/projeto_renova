@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     "agendar criolipólise campo bom",
     "especialista em criolipólise campo bom",
   ],
-  metadataBase: new URL("https://www.renovaclinicb.com.br"),
+  metadataBase: new URL("https://renovaclinicb.com.br"),
   alternates: {
-    canonical: "https://www.renovaclinicb.com.br",
+    canonical: "https://renovaclinicb.com.br",
   },
   openGraph: {
     type: "website",
-    url: "https://www.renovaclinicb.com.br",
+    url: "https://renovaclinicb.com.br",
     title: "Renova Clinic | Criolipólise e Tratamento Estético",
     description:
       "Renova Clinic - Criolipólise em Campo Bom: tratamento estético não invasivo para reduzir gordura localizada com protocolo personalizado. Agende avaliação e resultados comprovados.",

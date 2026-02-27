@@ -20,7 +20,7 @@ export function CTASection() {
           </p>
 
           <a
-            href="https://api.whatsapp.com/..."
+            href="https://api.whatsapp.com/send/?phone=+555196490632&text=Vim+do+Google+e+gostaria+de+agendar&type=phone_number&app_absent=0&gad_source=1&gad_campaignid=23441772904&gbraid=0AAAABB9h1o5NHB9PRcQydQ8fy-1dwk9C7&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uheOXfxqc9_FOQICnqtwpa4Q5D7l2acqaq5zzkL7WH9wDv9UuTbVgYaAlIHEALw_wcB"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {

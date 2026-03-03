@@ -44,6 +44,11 @@ export const metadata: Metadata = {
     "especialista em criolipólise campo bom",
   ],
   metadataBase: new URL("https://renovaclinicb.com.br"),
+  icons: {
+    icon: "/logotipo.jpeg",
+    apple: "/logotipo.jpeg",
+  },
+
   alternates: {
     canonical: "https://renovaclinicb.com.br",
   },

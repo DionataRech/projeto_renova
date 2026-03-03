@@ -2,6 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 
+declare global {
+  interface Window {
+    gtag?: (command: string, eventName: string, eventParams: Record<string, unknown>) => void;
+  }
+}
+
 export function CTASection() {
   const whatsappLink =
     "https://api.whatsapp.com/send/?phone=+555196490632&text=Vim+do+Google+e+gostaria+de+agendar&type=phone_number&app_absent=0&gad_source=1&gad_campaignid=23441772904&gbraid=0AAAABB9h1o5NHB9PRcQydQ8fy-1dwk9C7&gclid=Cj0KCQiA1czLBhDhARIsAIEc7uheOXfxqc9_FOQICnqtwpa4Q5D7l2acqaq5zzkL7WH9wDv9UuTbVgYaAlIHEALw_wcB";

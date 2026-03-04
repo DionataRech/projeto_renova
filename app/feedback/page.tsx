@@ -2,47 +2,26 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+
 import { TestimonialCard } from "@/components/ui/testimonial-card";
-import { VideoThumbnail } from "@/components/ui/video-thumbnail";
 import { GoogleReviewCard } from "@/components/ui/google-review-card";
 import { SectionHeader } from "@/components/ui/section-header";
+import { TestimonialsCarousel } from "@/components/ui/testimonials-carousel";
 
 export default function FeedbackPage() {
-  const [selectedVideo, setSelectedVideo] = useState<number | null>(null);
-
   const whatsappLink =
     "https://api.whatsapp.com/send/?phone=+555196490632&text=Vim+do+feedback+e+gostaria+de+agendar+uma+avaliação";
 
-  const videoTestimonials = [
-    {
-      id: 1,
-      thumbnail: "/images/testmonials/1.webp",
-      title: "Resultado Transformador",
-      name: "Maria Silva",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 2,
-      thumbnail: "/images/testmonials/2.webp",
-      title: "Experiência Incrível",
-      name: "Ana Costa",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 3,
-      thumbnail: "/images/testmonials/3.webp",
-      title: "Muito Satisfeita",
-      name: "Juliana Martins",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 4,
-      thumbnail: "/images/testmonials/4.webp",
-      title: "Recomendo!",
-      name: "Carolina Dias",
-      videoUrl: "https://www.instagram.com/p/DUVyAQlALpo/",
-    },
+  // imagens usadas pelo carrossel antigo de depoimentos
+  const carouselImages = [
+    "/images/testmonials/1.webp",
+    "/images/testmonials/2.webp",
+    "/images/testmonials/3.webp",
+    "/images/testmonials/4.webp",
+    "/images/testmonials/5.webp",
+    "/images/testmonials/6.webp",
+    "/images/testmonials/7.webp",
+    "/images/testmonials/8.webp",
   ];
 
   const instagramPosts = [
@@ -171,58 +150,18 @@ export default function FeedbackPage() {
           </div>
         </div>
       </section>
-      <section className="pt-10 lg:py-10 bg-white">
+      {/* Carousel de Feedbacks */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto mb-16">
-            <SectionHeader
-              tag="🎥 Assista"
-              title="Depoimentos em vídeo"
-              subtitle="Histórias reais de clientes que confiaram em nós"
-            />
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-foreground mb-8 text-balance">
+              Depoimentos reais (prints de WhatsApp)
+            </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {videoTestimonials.map((video, index) => (
-                <div
-                  key={video.id}
-                  className="animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <VideoThumbnail
-                    thumbnail={video.thumbnail}
-                    title={video.title}
-                    name={video.name}
-                    onClick={() => setSelectedVideo(video.id)}
-                  />
-                </div>
-              ))}
-            </div>
+            <TestimonialsCarousel images={carouselImages} />
           </div>
         </div>
       </section>
-
-      {selectedVideo && (
-        <div
-          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer animate-fade-in"
-          onClick={() => setSelectedVideo(null)}
-        >
-          <div
-            className="w-full max-w-3xl aspect-video rounded-2xl overflow-hidden shadow-2xl cursor-default"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src={
-                videoTestimonials.find((v) => v.id === selectedVideo)?.videoUrl
-              }
-              title="Depoimento em vídeo"
-              frameBorder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      )}
 
       {/* Text Testimonials */}
       <section className="py-16 lg:py-24 bg-white">

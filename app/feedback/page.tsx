@@ -247,7 +247,7 @@ export default function FeedbackPage() {
 
             <div className="text-center mt-12">
               <a
-                href="https://g.page/r/CXJwq8F5lX3SEAI/review"
+                href="https://www.google.com/search?q=Renova+Clinic&stick=H4sIAAAAAAAA_-NgU1I1qLA0NbQ0MbQ0NDEyNjRISTG2MqgwsrRMsTBNMjBOs0w0NjW0WMTKG5Sal1-WqOCck5mXmQwAOAG2pTkAAAA&hl=pt-BR&mat=CTRMcuch9zyTElYBTVDHnjwgY-kRenNYc7CHdAwN_lJmKsCOmSC7f_62QoNrO-CFyV2qEWVyF0Uuu1eOkVh3dHBRMUAT60fILjb4kLYdWbRjMxlFWBXPZsScZzbWNQjZKg&authuser=1#mpd=~10609626547167054900/customers/reviews"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -256,7 +256,7 @@ export default function FeedbackPage() {
                   size="lg"
                   className="rounded-full border-primary text-primary hover:bg-primary/10 transition-all duration-300 px-8"
                 >
-                  Ver todas as avaliações
+                  Ver todas as avaliações no Google
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </a>

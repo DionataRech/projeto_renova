@@ -95,11 +95,11 @@ export default function LinkBioPage() {
                           backgroundColor: "currentColor",
                         }}
                       />
-                    ) : (
+                    ) : Icon ? (
                       <Icon
                         className={`w-6 h-6 ${link.color} group-hover:text-primary-foreground transition-colors`}
                       />
-                    )}
+                    ) : null}
                   </div>
                   <span className="text-sm font-semibold text-foreground group-hover:text-primary-foreground transition-colors">
                     {link.label}

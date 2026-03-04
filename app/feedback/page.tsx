@@ -218,7 +218,7 @@ export default function FeedbackPage() {
             </h2>
 
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Agende uma avaliação sem compromisso com nossos especialistas e
+              Agende uma avaliação sem compromisso com a nossa especialista e
               descubra as melhores opções para você.
             </p>
 
@@ -262,8 +262,7 @@ export default function FeedbackPage() {
               <div>
                 <h3 className="font-serif text-lg mb-4">Renova Clinic</h3>
                 <p className="text-sm text-background/70">
-                  Clínica estética especializada em criolipólise e tratamentos
-                  inovadores.
+                  Clínica estética especializada em criolipólise
                 </p>
               </div>
               <div>
@@ -276,7 +275,7 @@ export default function FeedbackPage() {
                       rel="noopener noreferrer"
                       className="hover:text-background transition-colors"
                     >
-                      Site Principal
+                      Site Oficial
                     </a>
                   </li>
                   <li>

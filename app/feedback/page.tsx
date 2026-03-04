@@ -56,7 +56,7 @@ export default function FeedbackPage() {
       id: 3,
       author: "Berenice Taques",
       text: "Clinica maravilhosaaaa...atendimento espetacular...super indico !!",
-      rating: 4,
+      rating: 5,
       date: "Há 1 mês",
       profilePic: "/images/profiles/amanda.web.png",
     },
@@ -155,7 +155,8 @@ export default function FeedbackPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-foreground mb-8 text-balance">
-              Depoimentos reais (prints de WhatsApp)
+              Mini Depoimentos mas aquecem o Coração (prints de conversas de
+              WhatsApp, mensagens do Instagram, etc)
             </h2>
 
             <TestimonialsCarousel images={carouselImages} />

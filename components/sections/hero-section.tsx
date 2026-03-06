@@ -14,6 +14,7 @@ export function HeroSection() {
           {/* Mobile: Content first, centered */}
           <div className="w-full text-center lg:text-left space-y-6 lg:space-y-8 order-1">
             <img src="./images/logotipo.jpeg" alt="logotipo " />
+            <h1>Renova Clinic – Especialista em Criolipólise em Campo Bom</h1>
             <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-foreground text-balance">
               A gordura localizada que não sai com dieta e academia pode
               finalmente diminuir

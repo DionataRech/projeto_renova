@@ -13,6 +13,7 @@ export function HeroSection() {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[85vh]">
           {/* Mobile: Content first, centered */}
           <div className="w-full text-center lg:text-left space-y-6 lg:space-y-8 order-1">
+            <img src="./images/logotipo.jpeg" alt="logotipo " />
             <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-foreground text-balance">
               A gordura localizada que não sai com dieta e academia pode
               finalmente diminuir
@@ -43,9 +44,6 @@ export function HeroSection() {
                   Descubra se a criolipólise é indicada para o seu caso
                 </Button>
               </a>
-              <p className="text-sm text-muted-foreground">
-                (Avaliação individual e sem compromisso)
-              </p>
             </div>
           </div>
 

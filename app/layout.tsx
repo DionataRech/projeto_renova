@@ -45,8 +45,14 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://renovaclinicb.com.br"),
   icons: {
-    icon: "/logotipo.jpeg",
-    apple: "/logotipo.jpeg",
+    icon: "/images/f-icon.png",
+    apple: "/images/f-icon.png",
+    shortcut: "/images/f-icon.png",
+    other: {
+      rel: "icon",
+      url: "/images/f-icon.png",
+      type: "image/png",
+    },
   },
 
   alternates: {

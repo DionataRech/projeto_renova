@@ -9,9 +9,9 @@ import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { CTASection } from "@/components/sections/cta-section";
 import { Footer } from "@/components/sections/footer";
 
-export default function CriolipoliseLandingPage() {
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background text-foreground">
       <HeroSection />
       <IdentificationSection />
       <GuiltBreakSection />

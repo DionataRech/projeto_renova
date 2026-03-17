@@ -52,14 +52,24 @@ type FeatureCardProps = {
   title: string;
   description: string;
   accent: string;
+  img: string;
 };
 
-const FeatureCard = ({ title, description, accent }: FeatureCardProps) => (
+const FeatureCard = ({ title, description, accent, img }: FeatureCardProps) => (
   <article
     className={`rounded-2xl border ${accent} p-6 bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl`}
   >
     <h3 className="text-xl font-bold text-[#0f172a]">{title}</h3>
     <p className="mt-3 text-sm leading-6 text-slate-700">{description}</p>
+    <div className="mt-4 flex items-center justify-center">
+      <Image
+        src={img}
+        alt={title}
+        width={200}
+        height={200}
+        className="object-contain"
+      />
+    </div>
   </article>
 );
 
@@ -139,14 +149,14 @@ export default function EncapsuladosPage() {
       <section id="produto" className="mx-auto max-w-6xl px-6 pb-16">
         <div className="mb-8 text-center">
           <p className="text-sm uppercase tracking-widest text-[#D4AF37]/90">
-            Sistema Fusion | Extreme | White
+            Pink-Fusion | Black-Extreme | Blue-Mounjaro
           </p>
           <h2 className="mt-3 text-3xl font-bold text-slate-900 md:text-4xl">
             O trio de impacto para resultados de alta performance
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-slate-600">
-            Copy estratégica, probiótica e científica para convencer, nutrir e
-            converter com autoridade clínica.
+            Escolha a fórmula ideal para o seu objetivo de emagrecimento, cada
+            produto possui uma atuação metabólica específica.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -154,16 +164,19 @@ export default function EncapsuladosPage() {
             title="Fusion - Rosa"
             description="Drenagem & Metabolismo. O fim do inchaço matinal e a aceleração que seu corpo precisa."
             accent="border-[#FF007F]"
+            img="/images/fusion.jpeg"
           />
           <FeatureCard
             title="Extreme - Preto"
             description="Queima Máxima & Inibição. O controle total da ansiedade alimentar e foco extremo no emagrecimento."
             accent="border-[#1A1A1A]"
+            img="/images/extreme.jpeg"
           />
           <FeatureCard
-            title="White - Azul"
-            description="Detox & Energia. Limpeza profunda do organismo e disposição inabalável para o seu dia a dia."
+            title="Mounjaro - Blue"
+            description="Linha Blue foi desenvolvido para ajudar emagrecer com controle e disposição no dia a dia."
             accent="border-[#007BFF]"
+            img="/images/blue.jpeg"
           />
         </div>
       </section>
